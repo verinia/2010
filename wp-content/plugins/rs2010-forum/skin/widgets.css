@@ -1,0 +1,83 @@
+.rs2010forum-widget {
+    font-size: 12px;
+}
+.rs2010forum-widget .widget-element {
+    display: table;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+.rs2010forum-widget .widget-avatar,
+.rs2010forum-widget .widget-content {
+    display: table-cell;
+    vertical-align: top;
+}
+.rs2010forum-widget .widget-avatar {
+    width: 40px;
+}
+.rs2010forum-widget .widget-avatar img {
+    border-radius: 50%;
+    margin: 5px 10px 0 0;
+}
+.rs2010forum-widget .post-link,
+.rs2010forum-widget .post-author,
+.rs2010forum-widget .post-excerpt,
+.rs2010forum-widget .post-date {
+    display: block;
+    margin: 0; /* comp */
+}
+.rs2010forum-widget .post-excerpt {
+    margin: 5px 0px;
+}
+.rs2010forum-widget .highlight-admin,
+.rs2010forum-widget .highlight-admin a {
+    color: #e00000 !important;
+}
+.rs2010forum-widget .highlight-moderator,
+.rs2010forum-widget .highlight-moderator a {
+    color: #099922 !important;
+}
+.rs2010forum-widget .post-link a,
+.rs2010forum-widget .post-author a {
+    text-decoration: none;
+}
+.rs2010forum-widget .post-link a:hover,
+.rs2010forum-widget .post-author a:hover {
+    text-decoration: underline;
+}
+
+.rs2010forum-widget .post-date {
+    font-style: italic;
+}
+.rs2010forum-widget .post-author,
+.rs2010forum-widget .post-date {
+    font-size: 11px;
+}
+/* WIDGET: SEARCH */
+.rs2010forum-widget-search form {
+    position: relative;
+}
+.rs2010forum-widget-search input[type="search"] {
+    background: #f7f7f7;
+    border: 1px solid #d1d1d1;
+    border-radius: 0;
+    color: #686868;
+    padding: 0.625em 0.4375em;
+    width: 100%;
+    height: 35px;
+}
+.rs2010forum-widget-search button {
+    background: #256db3;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}

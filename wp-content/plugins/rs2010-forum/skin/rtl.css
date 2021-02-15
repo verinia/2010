@@ -1,0 +1,23 @@
+#rs-wrapper .forum-name,
+#rs-wrapper .topic-name,
+#rs-wrapper .forum-poster,
+#rs-wrapper .topic-poster {
+    text-align: right;
+}
+#rs-wrapper .last-post-headline {
+    float: left;
+}
+#rs-wrapper #forum-search {
+    float: left;
+}
+#rs-wrapper #forum-navigation,
+#rs-wrapper #forum-navigation-mobile {
+    float: right;
+}
+#rs-wrapper #read-unread span {
+    float: right;
+}
+#rs-wrapper #read-unread .indicator-label {
+    margin-right: 0px;
+    margin-left: 16px;
+}

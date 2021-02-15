@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Arial:400,700);
+
+.main_nav {
+	background: #444;
+	/*Nav Background Fancy CSS */
+	height:27px;
+	width:766px;
+	background:linear-gradient(180deg, rgba(173,165,151,1) 0%, rgba(179,172,158,1) 30%, rgba(179,172,158,1) 49%, rgba(208,201,187,1) 51%, rgba(208,201,187,1) 70%, rgba(185,178,164,1) 100%);
+	border: 1px solid;
+	border-image-source: linear-gradient(180deg, rgba(234,227,214,1) 0%, rgba(46,40,28,1) 50%, rgba(234,227,214,1) 100%);
+	border-image-slice: 1;
+	/* Fancy Nav Backgriound end */
+	display:grid;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 19px;
+	text-decoration: none;
+    z-index: 100;
+}
+.main_nav > ul {
+	display: grid;
+	text-align: center;
+	align-items: center;
+	grid-template-columns: repeat(7, 1fr);
+	list-style-type: none;
+	color: #fff;
+	column-gap: 3px;
+	margin: 0 0 0 0;
+	padding: 0px 2px 0px 2px;
+}
+.main_nav > ul > li, .main_nav > ul > li > a{
+	display:inline-block;
+	color: #e8d800;
+	text-decoration: none;
+	background: #777;
+	background:linear-gradient(180deg, rgba(67,70,75,1) 0%, rgba(0,0,0,1) 100%);
+	color: #e8d800;
+	height:24px;
+	Width: 100%;
+	line-height:26px;
+}
+/* Sub Nav Elements */
+.main_nav > ul > li > .sub-menu > li a{
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+}
+li ul.sub-menu {
+	position: absolute;
+	font-weight: bold;
+	padding: 1px 0 0px 0;
+    z-index: 100;
+}
+.main_nav > ul > li > .sub-menu > li{
+	display: none;
+	border: 1px #fff solid;
+	position: relative;
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+}
+.main_nav > ul > li > .sub-menu > li{
+	width: 165px;
+	border-width:0px 1px 1px 1px!important;
+	background: #777;
+	background:linear-gradient(180deg, rgba(67,70,75,1) 0%, rgba(0,0,0,1) 100%);
+	list-style-type: none;
+	opacity: 0.9;
+}
+
+.main_nav > ul > li > .sub-menu > li a span{
+	padding-left: 10px;
+}
+
+.main_nav > ul > li > .sub-menu > li a{
+	text-decoration: none!important;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+}
+/* Hover Elements */
+.main_nav > ul > li > .sub-menu > li > a:hover{
+	background:linear-gradient(180deg, rgba(251,221,139,1) 0%, rgba(252,206,82,1) 50%, rgba(248,182,3,1) 50%, rgba(250,209,99,1) 100%);
+	color: #000;
+    padding: 0;
+    margin: 0;
+}
+.main_nav > ul > li:hover > .sub-menu li {
+	display: block;
+}
+.main_nav > ul > li a:hover{
+	background:linear-gradient(180deg, rgba(251,221,139,1) 0%, rgba(252,206,82,1) 50%, rgba(248,182,3,1) 50%, rgba(250,209,99,1) 100%);
+	color:#000;
+}
+/* Special Elements */
+.main_nav > ul > .nav_login,.main_nav > ul > .nav_login a{
+	color:#4fbf0c;
+}
+.main_nav > ul > .nav_logout,.main_nav > ul > .nav_logout a{
+	color:#bf180c;
+}
+/* Static Elements */
+.main_nav > ul > .current-menu-item, .main_nav > ul > .current-menu-item a{
+	background:linear-gradient(180deg, rgba(251,221,139,1) 0%, rgba(252,206,82,1) 50%, rgba(248,182,3,1) 50%, rgba(250,209,99,1) 100%);
+	color:#000;
+}
+
+.wp-smiley {
+	width: 15px;
+	height: 15px !important;
+}
+
+/* Icons for TINYMCE */
+
+.tiny-smiley-angry {
+    background: url(smileys/angry.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-bigsmile {
+    background: url(smileys/bigsmile.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-nosmile {
+    background: url(smileys/nosmile.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-oO {
+    background: url(smileys/o.O.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-raise {
+    background: url(smileys/raised.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-sad {
+    background: url(smileys/sad.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-shocked {
+    background: url(smileys/shocked.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-smile {
+    background: url(smileys/smile.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-tongue {
+    background: url(smileys/tongue.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tiny-smiley-wink {
+    background: url(smileys/wink.gif) no-repeat;
+    width: 15px;
+    height: 15px;
+}
+
+img.wp-smiley {
+    max-height: none !important;
+    width: 15px;
+    height: 15px;
+}

@@ -1,0 +1,229 @@
+.top-spacer { margin-top: 10px; }
+.top-spacer20 { margin-top: 20px; }
+.bottom-spacer { margin-bottom: 10px; }
+.bottom-spacer20 { margin-bottom: 20px; }/
+.centered { text-align: center; }
+div.centered, table.centered {
+ margin-left: auto;
+ margin-right: auto;
+}
+.dialogue_subject {
+border:1px solid #453E33;
+color:#DBC68F;
+font-weight:bold;
+margin:0 auto 10px;
+padding:6px 0;
+text-align:center;
+width:698px;
+}
+#supportform {
+ padding-top: 5px;
+ padding-bottom: 10px;
+ padding-left: 10px;
+}
+#supportform div{
+ margin-top: 5px;
+}
+ol {
+ margin-top: 0px;
+}
+table.ticket-container {
+ border: solid 1px #8A754A;
+ width: 100%;
+ border-spacing: 1px;
+}
+.inbox-table {
+ margin-left: auto; margin-right: auto;
+ width: 100%;
+ border-spacing: 1px;
+ border: solid 1px #8A744A;
+ background-color: #45372A;
+}
+div.inbox-section {
+ position: relative;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+.title {
+ margin-bottom: 18px;
+}
+.inbox_body{
+ width: 699px; /* Width of 699px for IE5.5 or less (incorrectly includes borders in width), 695px for later browsers. */
+ margin: 0 auto;
+ background-color: #302A21;
+ border-left: 2px solid #151310;
+ border-right: 2px solid #151310;
+ padding-top: 5px;
+ voice-family: "\"}\"";
+ voice-family:inherit;
+  width: 695px;
+}
+html>body .inbox_body {
+  width: 695px;
+}
+.inbox_title_bar{
+ margin: 10px auto 0;
+ width: 701px;
+ height: 26px; 
+ background: url(./pm/inbox_titlebar.gif) no-repeat;
+ color: #dbc68f;
+ font-weight: bold;
+ line-height: 2.2em; 
+}
+.table_border_r{
+ border-right: 1px solid #4D493D;
+}
+.table_border_b{
+ border-bottom: 1px solid #4D493D;
+}
+.inbox_bottom{
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ top: -6px;
+}
+.inbox_table{
+ margin-top: -5px;
+ width: 100%;
+ border-collapse: collapse;
+}
+.inbox_table tr{
+ height: 30px;
+}
+.inbox_table td{
+ vertical-align: middle;
+ text-align: center;
+}
+.dialogue_link{
+ text-decoration: none;
+}
+.dialogue_link: hover{
+ text-decoration: underline;
+}
+.dialogue_icon {
+ margin-left: auto; 
+ margin-right: auto;
+}
+a.buttonTiny, input.buttonTiny {
+ background: url(https://www.runescape.com/img/jagex/tinybutton_light_bg.gif);
+ width:42px;
+ height:26px;
+ border: none;
+ color:#fff !important;
+ font-family: Arial;
+ font-weight:bold;
+ cursor: pointer !important;
+ cursor: hand;
+}
+
+.ticket {
+ text-align: left;
+ background-color: #0B0B0B;
+  border-spacing: 0;
+ width: 700px;
+ border: 1px solid;
+ min-height: 100px;
+ margin-left: auto;
+ margin-right: auto;
+}
+.ticket_leftbox {
+ margin-top: 0px;
+ float: left;
+ display: inline;
+ width: 147px;
+}
+.ticket_rightbox {
+ margin-left: 148px;
+ border-width: 0 0 0 1px;
+  border-style: solid;
+  /* Set height of 100px for IE5.5 or less, which doesn't support min-height and relying on 
+  expanding box bug to essentially do the same thing, but set min-height to 100px for other browsers. */
+  height: 100px;  
+ width: 550px;
+ voice-family: "\"}\"";
+ voice-family:inherit;
+ height: auto;
+  min-height: 100px; 
+}
+html>body .ticket_rightbox {
+ height: auto;
+  min-height: 100px; 
+}
+.ticket_topbar {
+ border-width: 1px 0px 0px 1px;
+ border-style: solid;
+ border-color: black;
+ color: white;
+ height: 23px;
+ padding-left: 10px;
+ padding-top: 4px;
+}
+.ticket_contentbox {
+ min-height: 50px; 
+ padding: 10px;
+}
+.float_clear {
+ float: clear;
+}
+/* for Internet Explorer. ticket_contentbox provides vertically liquid ticket boxes, 
+exploiting the expanding box bug of IE. rightbox and leftbox alter widths and margin
+to look appropriate. */
+/*\*/
+* html .ticket_contentbox {
+ height: 50px;
+}
+* html .ticket_leftbox {
+ margin-right: -5px;
+ width: 150px;
+}
+* html .ticket_rightbox {
+ width: 547px;
+}
+/* Service specific CSS. */
+.jmod {
+ border-color: #C29F43;
+}
+.Jagex {
+ border-color: #453F33;
+}
+.RuneScape {
+ border-color: #81633E;
+}
+.FunOrb {
+ border-color: #348017;
+}
+.jmod_box {
+ background: url(./pm/ticket_titlebar_jmod.gif) repeat-x;
+}
+.RuneScape_box {
+ background: url(./pm/ticket_titlebar_runescape.gif) repeat-x;
+}
+.FunOrb_box {
+ background: url(./pm/ticket_titlebar_funorb.gif) repeat-x;
+}
+.Jagex_box {
+ background: url(./pm/ticket_titlebar_jagex.gif) repeat-x;
+}
+.title_left {
+ width: 40%;
+ float: left;
+ font-weight: bold;
+}
+.title_center {
+ width: 20%;
+ float: left;
+ text-align: center;
+}
+.title_right {
+ float: right;
+ text-align: right;
+ padding-right: 6px;
+}
+#serviceform {
+ font-size: 22px;
+ line-height: 22px;
+}
+#serviceform select {
+ margin: 0;
+ vertical-align: middle;
+}
