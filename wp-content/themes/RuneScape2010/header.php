@@ -22,20 +22,11 @@
                     <div id="player_no">Welcome to <?php bloginfo( 'name' ); ?></div>
                 </div>
             <div id="headOrangeBottom"></div>
-            <div id="menubox">
-                <?php wp_nav_menu( array(
-                    'theme_location'  => 'header-menu',
-                    'container'       => 'div',
-                    'container_class' => 'main_nav',
-                    'container_id'    => '',
-                    'menu_class'      => '',
-                    'menu_id'         => '',
-                ) ); ?>
-            </div>
+
             
 
             
-<!--
+
             <div id="menubox">
                 <ul id="menus">
                     <li class="top"><a href="" id="home" class="tl"><span class="ts">Home</span></a></li>
@@ -44,7 +35,7 @@
                     <li class="top"><a href="#" id="home" class="tl">Game Guide</a></li>
                     <li class="top"><a href="#" id="home" class="tl">Community</a>
                         <ul>
-                            <li><a href="" class="fly"><span>Forums</span></a></li>
+                            <li><a href="./forum/" class="fly"><span>Forums</span></a></li>
                             <li><a href="" class="fly"><span>Hiscores</span></a></li>
                             <li><a href="" class="fly"><span>Membership</span></a></li>
                         </ul>
@@ -53,6 +44,6 @@
                     <li class="top"><a href="#" id="login" class="tl"><span class="ts">Log In</span></a></li>
             </ul><br class="clear" />
             </div>
--->
+
         </div>
 
