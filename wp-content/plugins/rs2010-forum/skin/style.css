@@ -489,11 +489,7 @@
 #rs-wrapper .content-element:last-child {
     border-bottom-width: 0px;
 }
-#rs-wrapper .topic-sticky,
-#rs-wrapper .topic-sticky .topic-poster {
-    background-color: #f1f8ff !important;
-    border-color: #e1e4e8 !important;
-}
+
 #rs-wrapper .forum-status,
 #rs-wrapper .forum-name,
 #rs-wrapper .forum-poster,
@@ -1837,8 +1833,8 @@
     cursor: pointer;
 }
 #rs-wrapper #poll-panel {
-    border: 1px solid #eee;
-    background-color: #fafafa;
+    background-color: #1D1506;
+    border: 1px solid #3F3320;
     padding: 8px 16px;
     margin-bottom: 15px;
 }
@@ -1846,7 +1842,7 @@
     display: block;
     line-height: 32px;
     font-size: 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #3F3320;
 }
 #rs-wrapper #poll-panel #poll-headline span {
     padding-right: 8px;
