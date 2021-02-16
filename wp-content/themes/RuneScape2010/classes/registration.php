@@ -1,5 +1,5 @@
 <?php
-function registration_form( $username, $password, $email) {
+function registration_form( $username, $password, $password2, $email) {
  
 //    echo '
 //    <form action="' . $_SERVER['REQUEST_URI'] . '" method="post">
@@ -126,7 +126,7 @@ if ( is_wp_error( $reg_errors ) ) {
 }
 
 function complete_registration() {
-    global $reg_errors, $username, $password, $email, $nickname;
+    global $reg_errors, $username, $password, $password2, $email, $nickname;
     if ( 1 > count( $reg_errors->get_error_messages() ) ) {
         $userdata = array(
         'user_login'    =>   $username,
@@ -135,9 +135,9 @@ function complete_registration() {
         'user_pass2'    =>   $password2
         );
         $user = wp_insert_user( $userdata ); ?>
-			<script type="text/javascript">
-				window.alert("Registration complete. You can now login!");
-			</script>
+        <div class="inner_brown_box" style="margin: 10px 0; text-align: center">
+            <h4>Registration Succesfull: You can now Login.</h4>
+        </div>
 		<?
     }
 }
@@ -163,6 +163,7 @@ function custom_registration_function() {
         complete_registration(
         $username,
         $password,
+        $password2,
         $email
         );
     }
