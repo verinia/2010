@@ -950,15 +950,15 @@ class Rs2010Forum {
             echo '<div class="topic-status '.$unread_status.'"><i class="far fa-comments"></i></div>';
             echo '<div class="topic-name">';
                 if ($this->is_topic_sticky($topic_object->id)) {
-                    echo '<span class="topic-icon fas fa-thumbtack" title="'.__('This topic is sticked', 'rs2010-forum').'"></span>';
+                    echo '<div class="topic-icon forum-sticky-img" title="'.__('This topic is sticked', 'rs2010-forum').'">&nbsp;</div>';
                 }
 
                 if ($this->is_topic_closed($topic_object->id)) {
-                    echo '<span class="topic-icon fas fa-lock" title="'.__('This topic is closed', 'rs2010-forum').'"></span>';
+                    echo '<div class="topic-icon forum-lock-img" title="'.__('This topic is closed', 'rs2010-forum').'">&nbsp;</div>';
                 }
 
                 if ($this->polls->has_poll($topic_object->id)) {
-                    echo '<span class="topic-icon fas fa-poll-h" title="'.__('This topic contains a poll', 'rs2010-forum').'"></span>';
+                    echo '<div class="topic-icon forum-poll-img" title="'.__('This topic contains a poll', 'rs2010-forum').'">&nbsp;</div>';
                 }
 
                 echo '<a href="'.$this->get_link('topic', $topic_object->id).'" title="'.$topic_title.'">';
@@ -1533,7 +1533,7 @@ class Rs2010Forum {
 
         echo '<div id="sticky-panel">';
             echo '<div class="title-element title-element-dark">';
-                echo '<span class="title-element-icon fas fa-thumbtack"></span>';
+                echo '<span class="title-element-icon forum-sticky-img"></span>';
                 echo __('Select Sticky Mode:', 'rs2010-forum');
             echo '</div>';
             echo '<div class="content-container">';
@@ -1542,7 +1542,7 @@ class Rs2010Forum {
                         echo '<label class="action-panel-option">';
                             echo '<input type="radio" name="sticky_topic" value="1">';
                             echo '<span class="action-panel-title">';
-                                echo '<span class="action-panel-icon fas fa-thumbtack"></span>';
+                                echo '<span class="action-panel-icon forum-sticky-img"></span>';
                                 echo __('Sticky', 'rs2010-forum');
                             echo '</span>';
                             echo '<span class="action-panel-description">';
@@ -1613,13 +1613,13 @@ class Rs2010Forum {
                     if ($this->is_topic_sticky($this->current_topic)) {
                         // Undo sticky button.
                         $menu .= '<a class="button button-normal topic-button-unsticky" href="'.$this->get_link('topic', $this->current_topic, array('unsticky_topic' => 1)).'">';
-                            $menu .= '<span class="menu-icon fas fa-thumbtack"></span>';
+                            $menu .= '<span class="menu-icon forum-sticky-img"></span>';
                             $menu .= __('Unsticky', 'rs2010-forum');
                         $menu .= '</a>';
                     } else {
                         // Sticky button.
                         $menu .= '<a class="button button-normal topic-button-sticky" href="'.$this->get_link('topic', $this->current_topic, array('sticky_topic' => 1)).'">';
-                            $menu .= '<span class="menu-icon fas fa-thumbtack"></span>';
+                            $menu .= '<span class="menu-icon forum-sticky-img"></span>';
                             $menu .= __('Sticky', 'rs2010-forum');
                         $menu .= '</a>';
                     }
