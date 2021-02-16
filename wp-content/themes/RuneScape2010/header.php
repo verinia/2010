@@ -55,7 +55,8 @@
                         </ul>
                     </li>
                     <li class="top"><a href="#" id="home" class="tl">Help</a></li>
-                    <li class="top"><a href="wp-login.php" id="<?php echo (is_user_logged_in()) ? "logout" : "login"; ?>" class="tl"><span class="ts"><?php echo (is_user_logged_in()) ? 'Username: ' . $current_user->user_login . "\n" : 'Login'; ?></span></a></li>
+                    <!--'Username: ' . $current_user->user_login . "\n"-->
+                    <li class="top"><a href="<?php echo (is_user_logged_in()) ? site_url('wp-login.php?action=logout') : site_url('wp-login.php'); ?>" id="<?php echo (is_user_logged_in()) ? "logout" : "login"; ?>" class="tl"><span class="ts"><?php echo (is_user_logged_in()) ? 'Logout' : 'Login'; ?></span></a></li>
             </ul><br class="clear" />
             </div>
 
