@@ -74,7 +74,7 @@ function checkit(){
 
 
 
-var input_order=["username","password1","password2","day","month","year","country","submitbutton"];
+var input_order=["username","password1","password2","email","submitbutton"];
 
 function a_pos(val, arr) {
  for(var i=0; i<arr.length; i++) if(val===arr[i]) return i;//>
@@ -161,11 +161,19 @@ window.onload = init;//]]></script>
 </div>
 <div class="section">
     <div class="brown_background" style="padding: 0;">
-       <?php character_registration_function(); ?>
+        <div class="width756">
+<div class="inner_brown_box brown_box_stack" id="cIntro">
+Creating an account is simple and free, and you will have access to the free worlds on Runescape and FunOrb for as long as you like. Just complete the form below, click on ?Continue?, and get ready to play!
+</div>
+
+
+      <?php custom_registration_function(); ?>
+
   
 </div>
 </div>
-</div>
+    </div>
+    </div>
 </div>
 
 
