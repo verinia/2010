@@ -29,19 +29,32 @@
 
             <div id="menubox">
                 <ul id="menus">
-                    <li class="top"><a href="" id="home" class="tl"><span class="ts">Home</span></a></li>
-                    <li class="top"><a href="" class="tl"><span class="ts">Play Now</span></a></li>
+                    <li class="top"><a href="#" id="home" class="tl"><span class="ts">Home</span></a></li>
+                    <li class="top"><a href="#" class="tl"><span class="ts">Play Now</span></a></li>
                     <li class="top"><a class="tl" href="#"><span class="ts">Account</span></a></li>
                     <li class="top"><a href="#" id="home" class="tl">Game Guide</a></li>
                     <li class="top"><a href="#" id="home" class="tl">Community</a>
                         <ul>
-                            <li><a href="./forum/" class="fly"><span>Forums</span></a></li>
+                            
+                            <li><a href="" class="fly"><span>Forums</span></a></li>
                             <li><a href="" class="fly"><span>Hiscores</span></a></li>
                             <li><a href="" class="fly"><span>Membership</span></a></li>
+                            <li><a href="#" class="fly"><span>Forums</span></a></li>
+                            <li><a href="#" class="fly"><span>Hiscores</span></a></li>
+                            <li><a href="#" class="fly"><span>Membership</span></a></li>
                         </ul>
                     </li>
                     <li class="top"><a href="#" id="home" class="tl">Help</a></li>
-                    <li class="top"><a href="#" id="login" class="tl"><span class="ts">Log In</span></a></li>
+                    <li class="top"><a href="<?php wp_login_url() ?>" id="login" class="tl"><span class="ts">
+                                <?php global $current_user; wp_get_current_user(); ?>
+                                <?php
+                                if ( is_user_logged_in() ) {
+                                    echo 'Username: ' . $current_user->user_login . "\n";
+                                } else {
+                                    echo 'Login';
+                                }
+                                ?>
+                            </span></a></li>
             </ul><br class="clear" />
             </div>
 
