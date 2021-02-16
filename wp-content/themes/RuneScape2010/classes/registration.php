@@ -36,12 +36,6 @@ $reg_errors = new WP_Error;
 if ( empty( $username ) || empty( $password ) || empty( $password2 ) || empty( $email ) ) {
     $reg_errors->add('field', 'Required form field is missing');
 }
-if ($password != $password2) {
-    $reg_errors->add( 'password', 'Passwords do not match!' );
-}
-if ( 4 > strlen( $username ) ) {
-    $reg_errors->add( 'username_length', 'Username too short. At least 4 characters is required' );
-}
 if ( username_exists( $username ) ) {
     $reg_errors->add('user_name', 'Sorry, that username already exists!');
 }
@@ -54,16 +48,19 @@ if ( !is_email( $email ) ) {
 if ( email_exists( $email ) ) {
     $reg_errors->add( 'email', 'Email Already in use' );
 }
+if (strcmp($password, $password2) !== 0) {
+    $reg_errors->add( 'password2', 'Passwords do not match!' );
+}
+    
+
 if ( is_wp_error( $reg_errors ) ) {
-    foreach ( $reg_errors->get_error_messages() as $error ) { ?>
-<!-- // 		echo '<div>';
-//         echo '<strong>ERROR</strong>:';
-//         echo $error . '<br/>';
-//         echo '</div>';   -->
-			<script type="text/javascript">
-				window.alert("Error: <?php echo $error; ?>");
-			</script>
-<?php    }
+    foreach ( $reg_errors->get_error_messages() as $error ) { 
+  		echo '<div>';
+         echo '<strong>ERROR</strong>:';
+         echo $error . '<br/>';
+         echo '</div>';   
+
+   }
 }
 }
 
@@ -73,7 +70,7 @@ function complete_registration() {
         $userdata = array(
         'user_login'    =>   $username,
         'user_email'    =>   $email,
-        'user_pass'     =>   $password
+        'user_pass'     =>   $password,
         'user_pass2'    =>   $password2
         );
         $user = wp_insert_user( $userdata ); ?>
@@ -94,7 +91,7 @@ function custom_registration_function() {
         );
          
         // sanitize user form input
-        global $username, $password, $password2 $email;
+        global $username, $password, $password2, $email;
         $username   =   sanitize_user( $_POST['username'] );
         $password   =   esc_attr( $_POST['password'] );
         $password2   =   esc_attr( $_POST['password2'] );
