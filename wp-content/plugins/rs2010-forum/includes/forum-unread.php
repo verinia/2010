@@ -238,15 +238,15 @@ class Rs2010ForumUnread {
                         $human_time_diff = sprintf(__('%s ago', 'rs2010-forum'), human_time_diff(strtotime($first_unread_post->date), current_time('timestamp')));
 
                         if ($this->rs2010forum->is_topic_sticky($topic->topic_id)) {
-                            echo '<span class="topic-icon fas fa-thumbtack"></span>';
+                            echo '<div class="topic-icon forum-sticky-img">&nbsp;</div>';
                         }
 
                         if ($this->rs2010forum->is_topic_closed($topic->topic_id)) {
-                            echo '<span class="topic-icon fas fa-lock"></span>';
+                            echo '<span class="topic-icon forum-lock-img">&nbsp;</span>';
                         }
 
                         if ($this->rs2010forum->polls->has_poll($topic->topic_id)) {
-                            echo '<span class="topic-icon fas fa-poll-h"></span>';
+                            echo '<span class="topic-icon forum-poll-img">&nbsp;</span>';
                         }
 
                         echo '<a href="'.$link.'" title="'.$topic_title.'">'.$topic_title.'</a>';

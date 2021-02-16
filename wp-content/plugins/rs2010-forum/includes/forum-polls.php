@@ -59,7 +59,7 @@ class Rs2010ForumPolls {
     public function poll_form_add() {
         echo '<div class="editor-row">';
             echo '<span class="row-title add-poll">';
-                echo '<span class="editor-row-title-icon fas fa-poll-h"></span>';
+                echo '<div class="editor-row-title-icon forum-poll-img">&nbsp;</div>';
                 echo __('Add Poll', 'rs2010-forum');
             echo '</span>';
 
@@ -110,7 +110,7 @@ class Rs2010ForumPolls {
     public function poll_form_edit($poll) {
         echo '<div class="editor-row">';
             echo '<span class="row-title add-poll">';
-                echo '<span class="editor-row-title-icon fas fa-poll-h"></span>';
+                echo '<div class="editor-row-title-icon forum-poll-img">&nbsp;</div>';
                 echo __('Add Poll', 'rs2010-forum');
             echo '</span>';
 
@@ -389,7 +389,7 @@ class Rs2010ForumPolls {
         echo '<div id="poll-panel">';
         echo '<form method="post" action="'.$this->rs2010forum->get_link('topic', $topic_id).'">';
             echo '<div id="poll-headline">';
-                echo '<span class="fas fa-poll-h"></span>';
+                echo '<div class="forum-poll-img">&nbsp;</div>';
                 echo esc_html(stripslashes($poll->title));
             echo '</div>';
 
