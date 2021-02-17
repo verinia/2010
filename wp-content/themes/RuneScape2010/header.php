@@ -4,7 +4,6 @@
         <meta charset="<?php bloginfo('charset'); ?>">
     	<?php wp_head(); ?>
         <title> <?php bloginfo( 'name' ); ?></title>
-        <?php global $current_user; wp_get_current_user(); ?>
     </head>
     
     <body>
@@ -23,21 +22,21 @@
                     <div id="player_no">Welcome to <?php bloginfo( 'name' ); ?></div>
                 </div>
             <div id="headOrangeBottom"></div>
-            <!--<div id="menubox">
-                <?php /*wp_nav_menu( array(
-                    'theme_location'  => 'header-menu',
+
+            
+
+            <div id="menubox">
+                <?php wp_nav_menu( array(
+                    'theme_location'  => 'primary_menu',
                     'container'       => 'div',
                     'container_class' => 'main_nav',
                     'container_id'    => '',
                     'menu_class'      => '',
                     'menu_id'         => '',
-                ) ); */?>
-            </div>-->
+                ) ); ?>
+            </div>
 
-            
-
-            
-
+<!--
             <div id="menubox">
                 <ul id="menus">
                     <li class="top"><a href="#" id="home" class="tl"><span class="ts">Home</span></a></li>
@@ -46,6 +45,7 @@
                     <li class="top"><a href="#" id="home" class="tl">Game Guide</a></li>
                     <li class="top"><a href="#" id="home" class="tl">Community</a>
                         <ul>
+                            
                             <li><a href="" class="fly"><span>Forums</span></a></li>
                             <li><a href="" class="fly"><span>Hiscores</span></a></li>
                             <li><a href="" class="fly"><span>Membership</span></a></li>
@@ -55,10 +55,19 @@
                         </ul>
                     </li>
                     <li class="top"><a href="#" id="home" class="tl">Help</a></li>
-                    <!--'Username: ' . $current_user->user_login . "\n"-->
-                    <li class="top"><a href="<?php echo (is_user_logged_in()) ? site_url('wp-login.php?action=logout') : site_url('wp-login.php'); ?>" id="<?php echo (is_user_logged_in()) ? "logout" : "login"; ?>" class="tl"><span class="ts"><?php echo (is_user_logged_in()) ? 'Logout' : 'Login'; ?></span></a></li>
+                    <li class="top"><a href="<?php wp_login_url() ?>" id="login" class="tl"><span class="ts">
+                                <?php global $current_user; wp_get_current_user(); ?>
+                                <?php
+                                if ( is_user_logged_in() ) {
+                                    echo 'Username: ' . $current_user->user_login . "\n";
+                                } else {
+                                    echo 'Login';
+                                }
+                                ?>
+                            </span></a></li>
             </ul><br class="clear" />
             </div>
+-->
 
         </div>
 

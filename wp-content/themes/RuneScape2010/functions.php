@@ -3,6 +3,8 @@
 require 'classes/breadcrumbs.php';
 require 'classes/smilies.php';
 require 'classes/avatar.php';
+require 'classes/registration.php';
+require 'classes/navbar-system.php';
 
 
 add_theme_support('menus');
@@ -57,6 +59,16 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+//function switch_menu_logged_in( $args = '' ) {
+//    if( is_user_logged_in() ) { 
+//        $args['menu'] = 'logged-in';
+//    } else { 
+//        $args['menu'] = 'logged-out';
+//    } 
+//        return $args;
+//    }
+//add_filter( 'wp_nav_menu_args', 'switch_menu_logged_in' );
 
 
 add_filter( 'wp_nav_menu_objects', function( $items ) {
