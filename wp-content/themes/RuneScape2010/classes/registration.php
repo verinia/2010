@@ -134,15 +134,18 @@ function complete_registration() {
         'user_pass'     =>   $password,
         'user_pass2'    =>   $password2
         );
-        $user = wp_insert_user( $userdata ); ?>
-        <div class="inner_brown_box" style="margin: 10px 0; text-align: center">
+        $user = wp_insert_user( $userdata );
+        echo '<div class="inner_brown_box" style="margin: 10px 0; text-align: center">
             <h4>Registration Succesfull: You can now Login.</h4>
-        </div>
-		<?
+        </div>';
     }
 }
 
 function custom_registration_function() {
+    $username = "";
+    $password = "";
+    $password2 = "";
+    $email = "";
     if ( isset($_POST['submit'] ) ) {
         registration_validation(
         $_POST['username'],
